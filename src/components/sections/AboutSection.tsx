@@ -50,7 +50,7 @@ const AboutSection = () => (
                   <h4 className="font-semibold text-foreground">{exp.title}</h4>
                   <p className="text-sm text-primary">
                     {exp.company} · {exp.period}
-                    {exp.isActive && <span className="ml-2 text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">Current</span>}
+                    {exp.isActive && <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-medium">Current</span>}
                   </p>
                 </div>
               </AccordionTrigger>
