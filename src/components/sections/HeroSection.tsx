@@ -1,4 +1,4 @@
-import { Award, Star, Clock, ArrowRight, ExternalLink } from "lucide-react";
+import { Award, Star, Clock, ArrowRight, Download } from "lucide-react";
 import { heroContent, heroBadges, socialLinks } from "@/data/portfolio";
 
 // Icon mapping for badges
@@ -44,15 +44,14 @@ const HeroSection = () => (
           <ArrowRight className="w-4 h-4" />
         </a>
       )}
-      {heroContent.secondaryCtaText && (
+      {heroContent.resumeText && (
         <a 
-          href={heroContent.secondaryCtaLink}
-          target="_blank"
-          rel="noopener noreferrer" 
+          href={heroContent.resumeLink}
+          download
           className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/5 transition-colors"
         >
-          {heroContent.secondaryCtaText}
-          <ExternalLink className="w-4 h-4" />
+          <Download className="w-4 h-4" />
+          {heroContent.resumeText}
         </a>
       )}
       {socialLinks.fiverr && (
@@ -63,7 +62,6 @@ const HeroSection = () => (
           className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/5 transition-colors"
         >
           Hire me on Fiverr
-          <ExternalLink className="w-4 h-4" />
         </a>
       )}
     </div>

@@ -45,6 +45,7 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -58,9 +59,9 @@ export const heroContent = {
   bio: "I help businesses and startups bring their ideas to life through clean, scalable code. As a Level 2 Fiverr seller, I've delivered 200+ projects—from sleek landing pages to full-featured SaaS dashboards—with a 4.9/5 client satisfaction rating.",
   ctaText: "Get in touch",
   ctaLink: "#contact",
-  // Secondary CTA (leave empty to hide)
-  secondaryCtaText: "",
-  secondaryCtaLink: "",
+  // Resume download button (leave empty to hide)
+  resumeText: "Download Resume",
+  resumeLink: "/resume.pdf", // Add your resume PDF to public folder
 };
 
 // Hero badges/stats
@@ -188,37 +189,37 @@ export const projectsContent = {
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and real-time inventory management.",
-    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=E-Commerce",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "LMS Course Platform",
+    description: "Full-featured learning management system with video courses, progress tracking, quizzes, certificates, and Stripe payment integration. Built for an ed-tech startup.",
+    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=LMS+Platform",
+    tags: ["Next.js", "Prisma", "PostgreSQL", "Stripe"],
     link: "#",
     featured: true,
   },
   {
     id: 2,
-    title: "Portfolio Template System",
-    description: "A customizable portfolio template system built with Next.js and TailwindCSS. Includes CMS integration and SEO optimization.",
-    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=Portfolio",
-    tags: ["Next.js", "TailwindCSS", "Sanity CMS"],
+    title: "Job Board SaaS",
+    description: "Multi-tenant job board platform with employer dashboards, applicant tracking, resume parsing, and subscription billing. Handles 10K+ listings.",
+    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=Job+Board",
+    tags: ["React", "Node.js", "MongoDB", "Redis"],
     link: "#",
     featured: true,
   },
   {
     id: 3,
-    title: "SaaS Dashboard",
-    description: "Analytics dashboard for SaaS companies featuring real-time data visualization, user management, and subscription handling.",
-    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=Dashboard",
-    tags: ["React", "TypeScript", "Firebase"],
+    title: "Real Estate Portal",
+    description: "Property listing platform with advanced search filters, map integration, virtual tours, and agent management. Mobile-responsive with 50K+ monthly users.",
+    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=Real+Estate",
+    tags: ["Next.js", "TypeScript", "Mapbox", "Supabase"],
     link: "#",
-    featured: false,
+    featured: true,
   },
   {
     id: 4,
-    title: "Webflow Agency Site",
-    description: "High-converting agency website with custom animations, CMS integration, and lead generation forms.",
-    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=Agency",
-    tags: ["Webflow", "GSAP", "Figma"],
+    title: "Travel Booking Engine",
+    description: "End-to-end travel booking system with flight/hotel search, dynamic pricing, booking management, and multi-currency support for a travel agency.",
+    image: "https://placehold.co/600x400/1a1a2e/4ade80?text=Travel+Booking",
+    tags: ["React", "Express", "PostgreSQL", "AWS"],
     link: "#",
     featured: false,
   },
@@ -268,6 +269,89 @@ export const contactMethods = [
 ];
 
 // --------------------------------------------
+// TESTIMONIALS SECTION
+// --------------------------------------------
+export const testimonialsContent = {
+  title: "What Clients Say",
+  subtitle: "Don't just take my word for it — here's what clients have to say about working with me.",
+};
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "J. Anthony",
+    role: "",
+    company: "United States",
+    image: "",
+    content: "Kashif did an amazing job! The website looks incredible and very professional. He was polite, communicative, and paid great attention to detail throughout the entire process. Super talented designer — highly recommended! 10/10",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Marcus B.",
+    role: "",
+    company: "Germany",
+    image: "",
+    content: "Absolutely wow! KASHIF is an outstanding professional, super friendly, and always reliable. He perfectly redesigned my website, making it look great on mobile as well. Very fast and competent service – always happy to work with him again!",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Sherry P.",
+    role: "",
+    company: "United Kingdom",
+    image: "",
+    content: "If I could give this guy more stars, I would. Thanks a million for your support and patience! I will be back!",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Maxwell E.",
+    role: "",
+    company: "United States",
+    image: "",
+    content: "I know barely anything about website design. This guy was so professional and made sure he got it right. I'm very happy with the results — money very well spent. He saved me a lot of time of trial and error.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "David X.",
+    role: "",
+    company: "Australia",
+    image: "",
+    content: "Kashif went above and beyond to help get the job done promptly and efficiently. He was always happy to help with my requests. Very good communication and turnaround times. Would highly recommend him to anyone!",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Svenja M.",
+    role: "",
+    company: "Germany",
+    image: "",
+    content: "I am beyond pleased with his work. Not only did he optimize my website for mobile, but he also gave me helpful suggestions to fix my site's SEO! Amazing experience — so friendly and responsive.",
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: "Mike J.",
+    role: "",
+    company: "India",
+    image: "",
+    content: "Excellent Work — my best experience on Fiverr so far! Easy and quick service. Great communication. Did what he said he would do. If you are considering working with this guy, give him a chance. You won't regret it!",
+    rating: 5,
+  },
+  {
+    id: 8,
+    name: "Eddie O.",
+    role: "",
+    company: "United States",
+    image: "",
+    content: "The Seller works fast, solved problems quickly, and was very understanding. Also demonstrated strong leadership skills and is an over-achiever. The pricing was better than competitors for similar service!",
+    rating: 5,
+  },
+];
+
+// --------------------------------------------
 // FOOTER
 // --------------------------------------------
 export const footerContent = {
@@ -276,11 +360,13 @@ export const footerContent = {
 };
 
 // --------------------------------------------
-// SECTION VISIBILITY (set to false to hide)
+// SECTION VISIBILITY
+// Set to false to visually hide (content still accessible to search engines)
 // --------------------------------------------
 export const sectionVisibility = {
   hero: true,
   about: true,
-  projects: false,  // Set to false to hide Projects section
+  projects: false,
+  testimonials: true,
   contact: true,
 };
