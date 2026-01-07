@@ -23,9 +23,9 @@
     --secondary: 220 10% 97%;
     --secondary-foreground: 220 15% 20%;
 
-    /* Muted */
+    /* Muted - Improved contrast for accessibility */
     --muted: 220 10% 97%;
-    --muted-foreground: 220 10% 50%;
+    --muted-foreground: 220 10% 40%;
 
     /* Border */
     --border: 220 10% 90%;
@@ -53,9 +53,9 @@
     --secondary: 220 15% 16%;
     --secondary-foreground: 220 10% 90%;
 
-    /* Muted */
+    /* Muted - Improved contrast for accessibility */
     --muted: 220 15% 16%;
-    --muted-foreground: 220 10% 60%;
+    --muted-foreground: 220 10% 72%;
 
     /* Border */
     --border: 220 15% 20%;
