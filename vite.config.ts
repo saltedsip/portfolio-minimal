@@ -15,4 +15,22 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Minification
+    minify: "esbuild",
+    // Target modern browsers for smaller bundle
+    target: "es2020",
+    // Rollup optimizations
+    rollupOptions: {
+      output: {
+        // Vendor chunk splitting for better caching
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          ui: ["@radix-ui/react-accordion", "@radix-ui/react-tooltip", "@radix-ui/react-toast"],
+        },
+      },
+    },
+  },
 }));
