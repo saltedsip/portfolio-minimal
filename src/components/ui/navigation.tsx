@@ -227,17 +227,24 @@ export const useScrollTracking = () => {
       setIsScrolled(window.scrollY > 20);
       setShowScrollTop(window.scrollY > 400);
 
-      const sections = navLinks.map(link => link.href.replace("#", ""));
+      // Only check sections that are visible
+      const visibleSections = navLinks
+        .map(link => link.href.replace("#", ""))
+        .filter(sectionId => {
+          const visibility = sectionVisibility[sectionId as keyof typeof sectionVisibility];
+          return visibility !== false;
+        });
+      
       const scrollPosition = window.scrollY + 150;
       const isAtBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 100;
       
       if (isAtBottom) {
-        setActiveSection(sections[sections.length - 1]);
+        setActiveSection(visibleSections[visibleSections.length - 1]);
       } else {
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const section = document.getElementById(sections[i]);
+        for (let i = visibleSections.length - 1; i >= 0; i--) {
+          const section = document.getElementById(visibleSections[i]);
           if (section && section.offsetTop <= scrollPosition) {
-            setActiveSection(sections[i]);
+            setActiveSection(visibleSections[i]);
             break;
           }
         }
@@ -245,6 +252,7 @@ export const useScrollTracking = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run once on mount to set initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
