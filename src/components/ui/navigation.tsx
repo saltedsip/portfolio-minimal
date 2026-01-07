@@ -155,9 +155,8 @@ export const Header = ({ isScrolled, activeSection, isDark, onToggleTheme }: Hea
 
 // Footer Component
 export const Footer = () => (
-  <footer className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border z-40 pb-[env(safe-area-inset-bottom)]">
-    {/* Extend background below for Android nav bar */}
-    <div className="absolute left-0 right-0 top-full h-20 bg-background/95" />
+  <footer className="relative md:fixed md:bottom-0 left-0 right-0 bg-background/95 md:backdrop-blur-sm border-t border-border z-40">
+
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
       <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">{footerContent.copyright}</p>
       
