@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         onToggleTheme={toggleTheme}
       />
       
-      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-28 sm:pb-24">
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-28 sm:pb-24" style={{ marginBottom: 'env(safe-area-inset-bottom, 0px)' }}>
         {children}
       </main>
 
